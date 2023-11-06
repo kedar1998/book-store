@@ -14,7 +14,7 @@ const bookSchema = new mongoose.Schema({
     required: [true, "Summary is required"],
     trim: true,
     minlength: 10,
-    maxlength: 100,
+    maxlength: 600,
   },
   author: {
     type: mongoose.Types.ObjectId,
