@@ -9,6 +9,8 @@
 
 Welcome to the Awesome Book Library API! This API allows you to manage users and books in a simple and efficient manner.
 
+Link to video - https://clipchamp.com/watch/TF8eXo8DXrj
+
 ## Table of Contents
 - [User Endpoints](#user-endpoints)
     - [Sign Up](#sign-up)
