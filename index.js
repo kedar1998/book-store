@@ -5,8 +5,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connect from "./db/connect.js"; // Database Connection
 import userRoute from "./routes/User.js";
+import bookRoute from "./routes/Book.js";
 import notFoundMiddleware from "./middleware/not-found.js";
 import errorHandlerMiddleware from "./errors/error-handler.js";
+import authenticate from "./middleware/authentication.js";
 
 dotenv.config();
 const app = express();
@@ -17,6 +19,7 @@ app.use(cors());
 
 // API Routes
 app.use("/api/v1", userRoute);
+app.use("/api/v1", authenticate, bookRoute);
 
 // Middleware
 app.use(notFoundMiddleware);
